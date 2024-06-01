@@ -166,7 +166,7 @@ onMounted(async () => {
         <template #body="{ data }">
           <span v-if="!data.salaryFrom && !data.salaryTo"> - </span>
           <span v-else>
-            <span v-if="data.salaryFrom">от {{ data.salaryFrom }}</span> <span v-if="data.salaryTo">до {{ data.salaryTo }}</span>
+            <span v-if="data.salaryFrom">от {{ (data as IInterview).salaryFrom }}</span> <span v-if="data.salaryTo">до {{ (data as IInterview).salaryTo }}</span>
           </span>
         </template>
       </app-column>
